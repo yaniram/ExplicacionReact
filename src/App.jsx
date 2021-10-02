@@ -44,21 +44,8 @@ function App() {
             <h1>Clases de Flores</h1>
            
                 <ul className="breedCardContainer"> 
-                    <li className="breedCard"> 
-                        <div className="contenedorImagen">
-                            <img src={rosas} alt="Rosas" />
-                        </div>
-                    
-                    <span className="breedTitle">Rosas</span>
-                </li>
-                
-          <li className="breedCard">
-            <div className="contenedorImagen"> 
-              <img src={girasoles} alt="Girasoles" />
-            </div>
-        
-            <span className="breedTitle">Girasoles</span>
-        </li>
+                   <CardClasesFlores nombreFlor= 'Rosas' imagen={rosas}/>  {/*Aca designo nombre y llamo la imagen */}
+                   <CardClasesFlores nombreFlor= 'Girasoles' imagen={girasoles}/>
     </ul>
 </section>
 <section></section>
@@ -66,6 +53,18 @@ function App() {
 <footer></footer>
 </div>
   );
+}
+
+function CardClasesFlores(props) {  {/*Aca coloco entre parentesis el props */}
+    return (
+        <li className="breedCard"> {/*Aca puedo añadir propiedades de cambio a todo si lo requiero */}
+            <div className="contenedorImagen">
+                <img src={props.imagen} alt={props.nombreFlor} />  {/*Aca para colocar funcion a la imagen */}
+            </div>
+
+            <span className="breedTitle">{props.nombreFlor}</span> {/*Aca para colocar la funcion del nombre */}
+        </li>
+    );
 }
 
 export default App;
