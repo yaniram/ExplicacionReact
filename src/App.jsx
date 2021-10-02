@@ -55,14 +55,14 @@ function App() {
   );
 }
 
-function CardClasesFlores(props) {  {/*Aca coloco entre parentesis el props */}
+function CardClasesFlores({nombreFlor, imagen}) {  {/*Aca coloco llaves y dentro de ellas los nombres de esas variables */}
     return (
         <li className="breedCard"> {/*Aca puedo añadir propiedades de cambio a todo si lo requiero */}
             <div className="contenedorImagen">
-                <img src={props.imagen} alt={props.nombreFlor} />  {/*Aca para colocar funcion a la imagen */}
+                <img src={imagen} alt={nombreFlor} />  {/*Aca coloco el nombre de la variable */}
             </div>
 
-            <span className="breedTitle">{props.nombreFlor}</span> {/*Aca para colocar la funcion del nombre */}
+            <span className="breedTitle">{nombreFlor}</span> {/*Aca para coloco el nombre de la variable */}
         </li>
     );
 }
